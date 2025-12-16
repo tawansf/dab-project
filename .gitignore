@@ -1,12 +1,33 @@
+# --- Databricks Asset Bundles (CRÍTICO) ---
+# Guarda o estado do deploy local. Se subir isso, quebra o deploy dos colegas.
 .databricks/
-build/
-dist/
+
+# --- Python ---
+# Arquivos compilados (lixo gerado automaticamente)
 __pycache__/
-*.egg-info
-.venv/
-scratch/**
-!scratch/README.md
-**/explorations/**
-**/!explorations/README.md
-.DS_Store
 *.pyc
+
+# Ambientes virtuais (se você criar um no futuro)
+.venv/
+env/
+venv/
+
+# --- Segurança (CRÍTICO) ---
+# Nunca suba arquivos que contenham senhas, tokens ou chaves
+.env
+.env.local
+secrets.json
+appsettings.local.json
+
+# --- Testes ---
+# Cache do Pytest
+.pytest_cache/
+
+# --- IDEs e Sistema Operacional ---
+# Configurações locais do seu editor (cores, atalhos, histórico)
+.vscode/
+.idea/
+
+# Lixo do Mac e Windows
+.DS_Store
+Thumbs.db
